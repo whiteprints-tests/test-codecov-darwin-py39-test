@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Romain Brault <mail@romainbrault.com>
+# SPDX-FileCopyrightText: © 2024 Romain Brault <mail@romainbrault.com>
 #
 # SPDX-License-Identifier: MIT OR Apache-2.0
 
@@ -17,7 +17,6 @@ keywords = [
     "Python",
 ]
 license = "MIT OR Apache-2.0"
-
 license-files.paths = [
     "LICENSES/CC0-1.0.txt",
     "LICENSES/MIT.txt",
@@ -55,8 +54,12 @@ dynamic = [
 dependencies = [
     "distro>=1.9.0",
     "importlib-metadata>=8.5.0; python_full_version<'3.10'",
+    "python-dotenv>=1.0.1",
+    "rich-click>=1.8.5",
     "typing-extensions>=4.12.2; python_full_version<'3.12'",
 ]
+
+scripts.test-codecov-darwin-py39-test = "test_codecov_darwin_py39_test.cli.entrypoint:test_codecov_darwin_py39_test"
 
 [dependency-groups]
 dev = [
